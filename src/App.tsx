@@ -1,8 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react";
+import logo from "./logo.svg";
+import "./App.css";
 
 function App() {
+  useEffect(() => {
+    const fetchItems = async () => {
+      const result = await fetch("/api/lal/");
+      const json = await result.json();
+      console.log(json);
+    };
+
+    fetchItems();
+  }, []);
+
   return (
     <div className="App">
       <header className="App-header">
