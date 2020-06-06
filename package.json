@@ -29,7 +29,7 @@
     "move-html": "mv ./build/index.html ./build/app.html || true",
     "move-server": "cp -r ./server/* ./build/",
     "predeploy": "run-s build move-html move-server",
-    "deploy": "gh-pages -d server",
+    "deploy": "gh-pages -d build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
