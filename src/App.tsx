@@ -19,12 +19,15 @@ function App() {
     <div className="App">
       <Router>
         <Switch>
-          <Route path="/test">Test!</Route>
+          <Route path="/test">
+            Test! <Link to="/">Back home</Link>
+          </Route>
           <Route path="/">
             <header className="App-header">
               <img src={logo} className="App-logo" alt="logo" />
               <p>Result from API: {result}</p>
               <Link to="/test">Test</Link>
+              <a href="/custom-php">Custom</a>
             </header>
           </Route>
         </Switch>

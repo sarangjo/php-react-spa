@@ -1,1 +1,1 @@
-<?php include "./build/index.html"; ?>
+<?php include "./app.html"; ?>

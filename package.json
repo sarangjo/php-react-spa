@@ -17,6 +17,7 @@
     "@types/react-dom": "^16.9.0",
     "@types/react-router-dom": "^5.1.4",
     "gh-pages": "^2.2.0",
+    "http-proxy-middleware": "^1.0.4",
     "npm-run-all": "^4.1.5",
     "react-scripts": "3.4.1",
     "typescript": "~3.7.2"
@@ -25,11 +26,12 @@
     "start:client": "react-scripts start",
     "start:server": "cd server && php -S localhost:4001",
     "build": "react-scripts build",
+    "move-html": "mv ./build/index.html ./build/app.html || true",
+    "move-server": "cp -r ./server/* ./build/",
+    "predeploy": "run-s build move-html move-server",
+    "deploy": "gh-pages -d server",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "process-build": "rm -rf ./server/build && cp -r build server/ && rm -rf build",
-    "predeploy": "run-s build process-build",
-    "deploy": "gh-pages -d server"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -45,7 +47,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "proxy": "http://localhost:4001",
-  "homepage": "/build"
+  }
 }
