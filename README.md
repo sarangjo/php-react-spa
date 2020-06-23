@@ -16,7 +16,7 @@ This is a template to allow for client-side React single-page applications runni
 
 ### Setup
 
-Install PHP, nodejs, yarn on your computer.
+Install PHP 7.x, nodejs (LTS release preferred), yarn 1.x on your computer.
 
 ### Development
 
