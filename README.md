@@ -14,6 +14,10 @@ This is a template to allow for client-side React single-page applications runni
 
 ## Quickstart
 
+### Setup
+
+Install PHP, nodejs, yarn on your computer.
+
 ### Development
 
 In one terminal, run:
