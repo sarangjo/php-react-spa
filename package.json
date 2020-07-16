@@ -24,7 +24,7 @@
   },
   "scripts": {
     "start:client": "react-scripts start",
-    "start:server": "cd server && php -S localhost:4001",
+    "start:server": "cd server && php -S 127.0.0.1:4001",
     "build": "react-scripts build",
     "move-html": "mv ./build/index.html ./build/app.html || true",
     "move-server": "cp -r ./server/* ./build/",
